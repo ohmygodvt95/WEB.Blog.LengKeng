@@ -47,27 +47,36 @@ section#intro{
     border: 10px solid rgba(0, 0, 0, 0.5);
 }
 #intro .logo{
-    height: 100px;
+    height: 80px;
 }
 #intro .content h3{
     font-family: 'Dosis';
     font-weight: 300;
     color: #fff;
+    margin-bottom: 30px;
 }
-#intro .content p{
+#intro .content h1{
     font-family: 'Oswald';
     text-transform: uppercase;
     color: #fff;
-    font-size: 160px;
+    font-size: 180px;
     line-height: 1;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -0.04em;
-    position: relative;
-    display: block;
     padding: 0px;
     text-shadow: 1px 1px 2px #000;
-    margin: 20px;
+    margin: 10px;
+    display: block;
+    position: relative;
+    height: 75px;
+    overflow: hidden;
+}
+
+#intro .content .heading-bottom{
+    display: block;
+    position: relative;
+    margin-top: -110px;
 }
 #intro .content-box{
     width: 250px;
@@ -79,7 +88,71 @@ section#intro{
     font-family: 'Raleway';
     font-size: 16px;
 }
-
+#intro .hr{
+    border-top: 1px solid #fff;
+    width: 250px;
+    margin-top: 30px;
+}
+#intro .next{
+    cursor: pointer;
+    transition: 0.5s;
+    line-height: 55px;
+    text-align: center;
+    margin-top: 60px;
+    height: 50px;
+    width: 50px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background-color: #DB0018;
+}
+#intro .next:hover{
+    box-shadow: 0px 0px 50px #fff;
+    transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+}
+#intro .next i{
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
 /**/
 /**/
 /**/
+@media screen and (max-width: 768px) {
+    section#intro{
+        padding: 0;
+    }
+    #intro .intro{
+        border: none;
+    }
+    #intro .logo{
+        height: 60px;
+    }
+    .menu i{
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .menu {
+        width: 60px;
+        height: 60px;
+        top: 0px;
+        right: 0px;
+    }
+    #intro .content h1{
+        font-size: 150px;
+        height: 50px;
+    }
+    #intro .hr{
+        width: 200px;
+    }
+    #intro .content-box{
+        width: 200px;
+    }
+    #intro .content .heading-bottom{
+        display: block;
+        position: relative;
+        margin-top: -95px;
+    }
+}
