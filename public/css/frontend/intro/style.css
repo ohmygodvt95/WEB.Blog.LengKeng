@@ -79,7 +79,7 @@ section{
     color:#DB0018;
     font-size: 35px;
 }
-.menu-active{
+.menu .menu-content > ul > li > a.menu-active{
     color: #DB0018;
 }
 /**
@@ -90,14 +90,14 @@ section{
 
  */
 section.enabled{
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
+    transition: 0.45s;
+    -webkit-transition: 0.45s;
     transform: scale(1);
     display: block;
 }
 section.disabled{
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
+    transition: 0.45s;
+    -webkit-transition: 0.45s;
     transform: scale(0);
     display: none;
 }
