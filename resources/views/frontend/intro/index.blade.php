@@ -31,7 +31,7 @@
         <i class="fa fa-bars fa-4x" status = "close"></i>
         <div class="menu-content">
             <ul class="center-block">
-                <li><a href="#home" title="" class="no-redirect">Home</a></li>
+                <li><a href="#intro" title="" class="no-redirect">Home</a></li>
                 <li><a href="#about" title="" class="no-redirect">About</a></li>
                 <li><a href="#project" title="" class="no-redirect">Project</a></li>
                 <li><a href="" title="">Photos</a></li>
@@ -68,7 +68,68 @@
         </div>
     </section>
     {{-- END SECTION INTRO --}}
+    {{-- SECTION ABOUT --}}
+    <section id="about" class="disabled" state="disabled">
+        <div class="container">
+            <h1 class="text-center heading">About</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+    </section>
+    {{-- SECTION PROJECT --}}
+    <section id="project" class="disabled" state="disabled">
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
+        <div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div><div class="container">
+            <h1 class="text-center heading">PROJECT</h1>
+            <h4 class="text-center sub-heading">Lorem ipsum Irure occaecat laboris dolore minim ut.</h4>
+        </div>
 
+    </section>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/jquery.kenburnsy.js') }}"></script>
@@ -109,7 +170,27 @@
                 }
             });
             $('.menu .menu-content ul li a.no-redirect').click(function(event) {
+                $('.menu .menu-content ul li a').removeClass('menu-active');
+                $(this).addClass('menu-active');
                 var target = $(this).attr('href');
+                var enabled = "#" + $('section[state=enabled]').attr('id');
+                if(target == enabled) {
+                    menu_close();
+                    return;
+                }
+                $('section[state=enabled]').css('transform', 'scale(0)');
+                setTimeout( function() {
+                    $("section[state=enabled]").css('display','none');
+                    $('section[state=enabled]').attr('state', 'disabled');
+                    setTimeout( function() {
+                        $('section' + target).css('display', 'block');
+                            setTimeout( function() {
+                                $('section' + target).css('transform', 'scale(1)');
+                                $('section' + target).attr('state', 'enabled');
+                                menu_close();
+                                }, 10);
+                        }, 10);
+                    }, 500);
             });
         });
     </script>

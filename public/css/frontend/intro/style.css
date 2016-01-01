@@ -79,6 +79,9 @@ section{
     color:#DB0018;
     font-size: 35px;
 }
+.menu-active{
+    color: #DB0018;
+}
 /**
 
     TODO:
@@ -87,12 +90,16 @@ section{
 
  */
 section.enabled{
-    display: block;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
     transform: scale(1);
+    display: block;
 }
 section.disabled{
-    display: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
     transform: scale(0);
+    display: none;
 }
 /**
  *
@@ -192,21 +199,21 @@ section#intro{
  * ABOUT
  *
  */
-section#about{
+section{
     color: #000;
     background-color: #fff;
 }
-#about h1, #about h3{
+section h1, #about h3{
     text-shadow: 0px 0px 1px #000;
 }
-#about h1.heading{
+section h1.heading{
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 60px;
     margin-top: 100px;
 }
-#about h3.sub-heading{
+section h3.sub-heading{
     font-weight: 100;
     font-family: 'Raleway', sans-serif;
 }
