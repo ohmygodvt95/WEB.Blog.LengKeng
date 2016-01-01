@@ -10,24 +10,11 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+/*=========================================
+=            Introduction Page            =
+=========================================*/
+Route::controller('/', 'Intro\IntroController');
+/*=====  End of Introduction Page  ======*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::controller('/test', 'Intro\IntroController');
-//Route::get('/test', 'Intro\IntroController@getIndex');
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});

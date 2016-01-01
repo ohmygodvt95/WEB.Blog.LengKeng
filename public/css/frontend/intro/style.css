@@ -1,44 +1,111 @@
+/**
+
+    Le Vinh Thien 2015
+
+ */
 html, body{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100%;
 }
-
 section{
+    position: relative;
+    z-index: 1;
     width: 100%;
     min-height: 100%;
 }
-/*BACKGROUND*/
+/*----------  Background  ----------*/
 .bg{
      z-index: 0!important;
     position: absolute;
 }
-/*MENU*/
+/*----------  MENU  ----------*/
 .menu {
     cursor: pointer;
     z-index: 9999;
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     top: 30px;
     right: 30px;
     color: #DB0018;
 }
 .menu i{
+    z-index: 9999;
     transition: 0.25s;
-    line-height: 80px;
+    -webkit-transition: 0.25s;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
 }
 .menu i:hover{
     color: red;
 }
+.menu .menu-content{
+    position: fixed;
+    transform: scale(0);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+.menu .menu-content ul{
+    padding: 0;
+    margin: 0;
+    margin-top: 15%;
+    list-style: none;
+}
+.menu .menu-content > ul > li{
+    text-align: center;
+    height: 45px;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 45px;
+}
+.menu .menu-content > ul > li > a{
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    font-family: 'Dosis', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0px 0px 1px #000;
+}
+.menu .menu-content > ul > li > a:hover{
+    text-decoration: none;
+    color:#DB0018;
+    font-size: 35px;
+}
+/**
 
-/*INTRODUCTIOn*/
+    TODO:
+    - enabled
+    - disabled
+
+ */
+section.enabled{
+    display: block;
+    transform: scale(1);
+}
+section.disabled{
+    display: none;
+    transform: scale(0);
+}
+/**
+ *
+ * INTRODUCTION
+ *
+ */
 section#intro{
     position: relative;
     z-index: 1;
     padding: 20px;
     height: 100%;
     background-color: rgba(0,0,0,0.7);
+    overflow: hidden;
 }
 #intro .intro{
     z-index: 1;
@@ -50,13 +117,13 @@ section#intro{
     height: 80px;
 }
 #intro .content h3{
-    font-family: 'Dosis';
+    font-family: 'Dosis', sans-serif;
     font-weight: 300;
     color: #fff;
     margin-bottom: 30px;
 }
 #intro .content h1{
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     color: #fff;
     font-size: 180px;
@@ -85,7 +152,7 @@ section#intro{
 }
 #intro #owl-heading div{
     color: #fff;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
 #intro .hr{
@@ -117,9 +184,37 @@ section#intro{
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
-/**/
-/**/
-/**/
+#particles-holder{
+    position: fixed!important;
+}
+/**
+ *
+ * ABOUT
+ *
+ */
+section#about{
+    color: #000;
+    background-color: #fff;
+}
+#about h1, #about h3{
+    text-shadow: 0px 0px 1px #000;
+}
+#about h1.heading{
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 60px;
+    margin-top: 100px;
+}
+#about h3.sub-heading{
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+}
+/**
+ *
+ * @media
+ *
+ */
 @media screen and (max-width: 768px) {
     section#intro{
         padding: 0;
@@ -132,13 +227,25 @@ section#intro{
     }
     .menu i{
         font-size: 40px;
-        line-height: 60px;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
     }
     .menu {
-        width: 60px;
-        height: 60px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
         top: 0px;
         right: 0px;
+    }
+    .menu .menu-content{
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+    .menu .menu-content ul{
+        margin-top: 35%;
     }
     #intro .content h1{
         font-size: 150px;
@@ -155,4 +262,6 @@ section#intro{
         position: relative;
         margin-top: -95px;
     }
+
+
 }
