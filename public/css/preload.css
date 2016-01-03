@@ -1,5 +1,12 @@
+/**
+ *
+ * Preloader
+ *
+ */
+
+/*#45b29d;*/
 #loading {
-    background-color: #45b29d;
+    background-color:#fff;
     height: 100%;
     width: 100%;
     position: fixed;

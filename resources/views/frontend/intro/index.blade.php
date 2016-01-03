@@ -176,7 +176,7 @@
                     $('.menu i').attr('status', 'open');
                     $('.menu i').attr('class', 'fa fa-close fa-4x');
                     $('.menu .menu-content').css('transform', 'scale(1)');
-                }, 10);
+                },10);
             }
             function menu_close () {
                 $('.menu .menu-content').css('transform', 'scale(0.7)');
@@ -184,7 +184,7 @@
                     $('.menu .menu-content').css('display', 'none');
                     $('.menu i').attr('status', 'close');
                     $('.menu i').attr('class', 'fa fa-bars fa-4x');
-                }, 500);
+                }, 250);
             }
             $('.menu i').click(function(event) {
                 var status = $(this).attr('status');
@@ -206,7 +206,7 @@
                     menu_close();
                     return;
                 }
-                $('section[state=enabled]').css('transform', 'scale(0.7)');
+                $('section[state=enabled]').css('transform', 'scale(0.8)');
                 setTimeout( function() {
                     $("section[state=enabled]").css('display','none');
                     $('section[state=enabled]').attr('state', 'disabled');
@@ -216,9 +216,10 @@
                                 $('section' + target).css('transform', 'scale(1)');
                                 $('section' + target).attr('state', 'enabled');
                                 menu_close();
+                                $(document).scrollTop(0);
                                 }, 10);
                         }, 10);
-                    }, 350);
+                    }, 250);
             });
         });
     </script>
