@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LVT - Introduction</title>
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery.kenburnsy.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/frontend/intro/style.css') }}">
+    <title>Le Vinh Thien - Introduction</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/preload.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.transitions.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.kenburnsy.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/intro/style.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,700,800|Oswald:400,500,600,700|Dosis:400,300,700' rel='stylesheet' type='text/css'>
     <!-- google fonts end -->
     <!--[if lt IE 9]>
@@ -20,6 +21,23 @@
 
 </head>
 <body>
+    {{-- PRELOADER --}}
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+            </div>
+        </div>
+    </div>
     {{-- BG --}}
     <div id="bg" class="bg">
         <img src="{{ asset('images/bg/bg2.jpg') }}">
@@ -31,22 +49,21 @@
         <i class="fa fa-bars fa-4x" status = "close"></i>
         <div class="menu-content">
             <ul class="center-block">
-                <li><a href="#intro" title="" class="no-redirect menu-active">Home</a></li>
-                <li><a href="#about" title="" class="no-redirect">About</a></li>
-                <li><a href="#project" title="" class="no-redirect">Project</a></li>
+                <li><a href="#intro" title="Home" class="no-redirect menu-active">Home</a></li>
+                <li><a href="#about" title="About" class="no-redirect">About</a></li>
+                <li><a href="#project" title="Project" class="no-redirect">Project</a></li>
                 <li><a href="" title="">Photos</a></li>
                 <li><a href="" title="">Blog</a></li>
                 <li><a href="" title="">Contact</a></li>
             </ul>
         </div>
     </div>
-
+    <!-- particles start -->
+    <div id="particles-holder">
+    </div>
+    <!-- particles end -->
     <section id="intro" class="enabled" state="enabled">
-        <!-- particles start -->
-        <div id="particles-holder">
-            <canvas id="city-canvas"></canvas>
-        </div>
-        <!-- particles end -->
+
         <div class="intro">
             <div class="logo"></div>
             <div class="content">
@@ -133,9 +150,14 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/jquery.kenburnsy.js') }}"></script>
-    <script src="{{ asset('js/particles-light.js') }}"></script>
+    <script src="{{ asset('js/jquery.particleground.min.js') }}"></script>
     <script>
         $(document).ready(function() {
+            $('#particles-holder').particleground({
+                dotColor: '#fff',
+                lineColor: '#fff'
+            });
+
             $("#owl-heading").owlCarousel({
                 navigation : false,
                 slideSpeed : 300,
@@ -149,14 +171,20 @@
                 fullscreen: true
             });
             function menu_open () {
-                $('.menu .menu-content').css('transform', 'scale(1)');
-                $('.menu i').attr('status', 'open');
-                $('.menu i').attr('class', 'fa fa-close fa-4x');
+                $('.menu .menu-content').css('display', 'block');
+                setTimeout(function() {
+                    $('.menu i').attr('status', 'open');
+                    $('.menu i').attr('class', 'fa fa-close fa-4x');
+                    $('.menu .menu-content').css('transform', 'scale(1)');
+                }, 10);
             }
             function menu_close () {
-                $('.menu .menu-content').css('transform', 'scale(0)');
-                $('.menu i').attr('status', 'close');
-                $('.menu i').attr('class', 'fa fa-bars fa-4x');
+                $('.menu .menu-content').css('transform', 'scale(0.7)');
+                setTimeout(function() {
+                    $('.menu .menu-content').css('display', 'none');
+                    $('.menu i').attr('status', 'close');
+                    $('.menu i').attr('class', 'fa fa-bars fa-4x');
+                }, 500);
             }
             $('.menu i').click(function(event) {
                 var status = $(this).attr('status');
@@ -178,7 +206,7 @@
                     menu_close();
                     return;
                 }
-                $('section[state=enabled]').css('transform', 'scale(0)');
+                $('section[state=enabled]').css('transform', 'scale(0.7)');
                 setTimeout( function() {
                     $("section[state=enabled]").css('display','none');
                     $('section[state=enabled]').attr('state', 'disabled');
@@ -188,10 +216,15 @@
                                 $('section' + target).css('transform', 'scale(1)');
                                 $('section' + target).attr('state', 'enabled');
                                 menu_close();
-                                }, 0);
-                        }, 0);
+                                }, 10);
+                        }, 10);
                     }, 350);
             });
+        });
+    </script>
+    <script>
+        $(window).load(function() {
+            $("#loading").fadeOut(1000);
         });
     </script>
 </body>

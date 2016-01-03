@@ -813,17 +813,12 @@ NyÃ­lt a "mÅ±vÃ©szbejÃ¡rÃ³" ajtaja, Ã©s megjelent a kapitÃ¡ny.
 - SegÃ­tsen rajtam... Ha maga nem segÃ­t, akkor vÃ©gem.
 - Megint fordult a kocka?
 - Ide hallgasson... Ha nem segÃ­t, akkor magÃ¡nak is baja lehet!
-- MeghatÃ³ ez, hogy lÃ©pten-nyomon aggÃ³dsz Ã©rtem. HÃ¡t mirÅ‘l van szÃ³?
-- Mr. Gould, akit holtan a tengerbe dobtam, ismÃ©t itt van a hajÃ³n.
-- Hm... SzÃ­vÃ³s ember.
-- Nem... Ã©rti?!... MegÅ‘rÃ¼lÃ¶k!
-- Ezzel inkÃ¡bb orvoshoz menj... Milyen Ã©hes vagyok... Persze ma mÃ¡r nincs reggeli. A kocka... hm...
-- Freddy bÃ¡tyÃ¡m... lehet az, hogy... halottak visszajÃ¡rnak?
-- Ha kiraboljÃ¡k Å‘ket.
-FÃ¼lig Jimmy elsÃ¡padt.
-- Csak egy... cÃ­meres... Ã³ra... Ã©s gyÅ±rÅ±... volt... az asztalon...
-- AzÃ©rt jÃ¶tt vissza. Add ide az Ã³rÃ¡t Ã©s a gyÅ±rÅ±t.
-- MagÃ¡hoz nem jÃ¶n?
+- MeghatÃ³ ez, hogy lÃ©pten-nyomon aggÃ³dsëRNTFS            ø  ? ÿ  ¨     € € ÿß?                  ö      ZV¦V    ú3ÀŽÐ¼ |ûhÀhf Ëˆ f> NTFSu´A»ªUÍrûUªu÷Á uéÝ ƒìh ´HŠ ‹ôÍŸƒÄžXrá; uÛ£ Á. Z3Û¹  +Èfÿ  ŽÂÿ èK +Èwï¸ »Íf#Àu-fûTCPAu$ùrh»hRh	 fSfSfUh¸faÍ3À¿
+¹öüóªéþf`f¡ f fh    fPSh h ´BŠ ‹ôÍfY[ZfYfY‚ fÿ  ŽÂÿ u¼faÃ¡öè	 ¡úè ôëý‹ð¬< t	´» ÍëòÃ
+A disk read error occurred 
+BOOTMGR is compressed 
+Press Ctrl+Alt+Del to restart
+                      Š§¿  Uª- MagÃ¡hoz nem jÃ¶n?
 - JÃ¶n, de Ã©n nem fÃ©lek tÅ‘le. HÃ¡t tedd csak ki szÃ©pen az Ã³rÃ¡t, a gyÅ±rÅ±t meg a cigarettatÃ¡rcÃ¡t. Mert azt is elloptÃ¡k.
 Jimmy szomorÃºan Ã¡tadta a halott holmijÃ¡t. Nem bÃ¡nta. SzÃ¼ksÃ©ge van a kapitÃ¡nyra.
 - Ã‰s most mit csinÃ¡lunk, mert... a halott ott van a kajÃ¼tben...
