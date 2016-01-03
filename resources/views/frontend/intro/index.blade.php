@@ -62,7 +62,7 @@
     <div id="particles-holder">
     </div>
     <!-- particles end -->
-    <section id="intro" class="enabled" state="enabled">
+    <section id="intro" class="enabled" state="enabled" style="opacity: 1">
 
         <div class="intro">
             <div class="logo"></div>
@@ -175,11 +175,11 @@
                 setTimeout(function() {
                     $('.menu i').attr('status', 'open');
                     $('.menu i').attr('class', 'fa fa-close fa-4x');
-                    $('.menu .menu-content').css('transform', 'scale(1)');
+                    $('.menu .menu-content').css({'opacity': 1, 'transform': 'scale(1)'});
                 },10);
             }
             function menu_close () {
-                $('.menu .menu-content').css('transform', 'scale(0.7)');
+                $('.menu .menu-content').css({'opacity': 1, 'transform': 'scale(0.7)'});
                 setTimeout(function() {
                     $('.menu .menu-content').css('display', 'none');
                     $('.menu i').attr('status', 'close');
@@ -206,14 +206,14 @@
                     menu_close();
                     return;
                 }
-                $('section[state=enabled]').css('transform', 'scale(0.8)');
+                $('section[state=enabled]').css({ 'opacity': 0, 'transform': 'scale(0.8)'});
                 setTimeout( function() {
-                    $("section[state=enabled]").css('display','none');
+                    $("section[state=enabled]").css({'display': 'none'});
                     $('section[state=enabled]').attr('state', 'disabled');
                     setTimeout( function() {
                         $('section' + target).css('display', 'block');
                             setTimeout( function() {
-                                $('section' + target).css('transform', 'scale(1)');
+                                $('section' + target).css({'opacity': 1, 'transform': 'scale(1)'});
                                 $('section' + target).attr('state', 'enabled');
                                 menu_close();
                                 $(document).scrollTop(0);
