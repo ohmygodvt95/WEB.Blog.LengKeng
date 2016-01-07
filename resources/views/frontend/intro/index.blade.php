@@ -65,7 +65,7 @@
         <img src="{{ asset('images/bg/bg3.jpg') }}">
         <img src="{{ asset('images/bg/bg1.jpg') }}">
     </div>
-    <h1 class="hidden">HOME | Welcome to my personal website| Laravel 5.1</h1>
+    <h1 class="hidden">HOME | Welcome to my personal website</h1>
     {{-- SECTION INTRO --}}
     <div class="menu">
         <i class="fa fa-bars fa-4x" status = "close"></i>
