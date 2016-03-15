@@ -47,6 +47,7 @@ section {
 }
 
 .menu i {
+    position: relative;
     line-height: 60px;
     z-index: 9999!important;
     width: 60px;
@@ -61,8 +62,7 @@ section {
 
 .menu .menu-content {
     position: fixed;
-    z-index: 9998!important;
-    z-index: 1;
+    z-index: 1000!important;
     top: 20px;
     right: 20px;
     bottom: 20px;
