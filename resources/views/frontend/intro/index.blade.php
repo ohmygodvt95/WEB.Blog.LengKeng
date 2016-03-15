@@ -74,6 +74,7 @@
                 <li><a href="#intro" title="Home" class="no-redirect menu-active">Home</a></li>
                 <li><a href="#about" title="About" class="no-redirect">About</a></li>
                 <li><a href="#project" title="Project" class="no-redirect">Project</a></li>
+                <li><a href="{{url('tools')}}" title="Tools" class="no-redirect">Tools</a></li>
                 <li><a href="" title="">Photos</a></li>
                 <li><a href="" title="">Blog</a></li>
                 <li><a href="" title="">Contact</a></li>

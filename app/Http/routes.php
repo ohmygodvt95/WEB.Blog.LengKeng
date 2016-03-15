@@ -13,8 +13,15 @@
 /*=========================================
 =            Introduction Page            =
 =========================================*/
-Route::controller('/', 'Intro\IntroController');
+Route::get('/', 'Intro\IntroController@getIndex');
 /*=====  End of Introduction Page  ======*/
+
+/*==================================
+=            Tools Page            =
+==================================*/
+Route::controller('tools', 'Tools\ToolsController');
+/*=====  End of Tools Page  ======*/
+
 
 
 
